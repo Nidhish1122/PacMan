@@ -1,0 +1,1585 @@
+var b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30,b31,b32,b33,b34,b35,b36,b37,b38,b39
+var b40;
+var b41;
+var b42;
+var b43;
+var b44;
+var b45;
+var b46;
+var b47;
+var b48;
+var b49;
+var b50;
+var b51;
+var b52;
+var b53;
+var b54;
+var b55;
+var b56;
+var b57;
+var b58;
+var b59;
+var b60;
+var b61;
+var b62;
+var b63;
+var b64;
+var b65;
+var b66;
+var b67;
+var b68;
+var b69;
+var b70;
+var b71;
+var b72;
+var b73;
+var b74;
+var b75;
+var b76;
+var b77;
+var b78;
+var b79;
+var b80;
+var b81;
+var b82;
+var a1,a2,a3,a4,a5,a6,a7,a8,a9;
+var c1,c2,c3,c4,c5,c6,c7,c8,c9;
+var d1,d2,d3,d4,d5,d6,d7,d8,d9;
+var e1,e2,e3,e4,e5,e6,e7,e8,e9;
+var f1,f2,f3,f4,f5,f6,f7,f8,f9;
+var g1,g2,g3,g4,g5,g6,g7,g8,g9;
+var h1,h2,h3,h4,h5,h6,h7,h8,h9;
+var i1,i2,i3,i4,i5,i6,i7,i8,i9;
+var j1,j2,j3,j4,j5,j6,j7,j8,j9;
+var k1,k2,k3,k4,k5,k6,k7,k8,k9;
+var l1,l2,l3,l4,l5,l6,l7,l8,l9;
+var m1,m2,m3,m4,m5,m6,m7,m8,m9;
+var n1,n2,n3,n4,n5,n6,n7,n8,n9;
+var o1,o2,o3,o4,o5,o6,o7,o8,o9;
+var p1,p2,p3,p4,p5,p6,p7,p8,p9;
+var q1,q2,q3,q4,q5,q6,q7,q8,q9;
+var r1,r2,r3,r4,r5,r6,r7,r8,r9;
+var s1,s2,s3,s4,s5,s6,s7,s8,s9;
+var t1,t2,t3,t4,t5,t6,t7,t8,t9;
+var u1,u2,u3,u4,u5,u6,u7,u8,u9;
+var v1,v2,v3,v4,v5;
+var pac;
+var score;
+var gh1,gh2,gh3,gi1,gi2,gi3,pac1,pac2,pac3,pac4;
+var time;
+var PLAY=0;
+var END=0;
+var gameState=PLAY
+
+function preload(){
+  gi1=loadImage("gh1.png")
+  gi2=loadImage("gh2.png")
+  gi3=loadImage("gh3.png")
+  pac1=loadImage("Pac.png")
+  pac2=loadImage("Pac_left.jpg")
+  pac3=loadImage("Pac_up.jpg")
+  pac4=loadImage("Pac_down.jpg")
+}
+function setup() {
+  createCanvas(1200, 400);
+  time=createSprite(1100,-200,10,10)
+  time.shapeColor="grey"
+  b1=createSprite(600,50,1000,2)
+  b1.shapeColor="blue";
+  b2=createSprite(600,350,1000,2)
+  b2.shapeColor="blue";
+  b3=createSprite(99,86,2,75)
+  b3.shapeColor="blue";
+  b4=createSprite(99,314,2,75)
+  b4.shapeColor="blue";
+  b5=createSprite(1101,86,2,75)
+  b5.shapeColor="blue";
+  b6=createSprite(1101,314,2,75)
+  b6.shapeColor="blue";
+  b7=createSprite(131,124,65,2)
+  b7.shapeColor="blue";
+  b8=createSprite(131,276,65,2)
+  b8.shapeColor="blue";
+  b9=createSprite(1069,124,65,2)
+  b9.shapeColor="blue";
+  b10=createSprite(1069,276,65,2)
+  b10.shapeColor="blue";
+  b11=createSprite(164,138,2,30)
+  b11.shapeColor="blue";
+  b12=createSprite(164,262,2,30)
+  b12.shapeColor="blue";
+  b13=createSprite(131,247,65,2)
+  b13.shapeColor="blue";
+  b14=createSprite(131,153,65,2)
+  b14.shapeColor="blue";
+  b78=createSprite(1036,138,2,30)
+  b78.shapeColor="blue";
+  b79=createSprite(1036,262,2,30)
+  b79.shapeColor="blue";
+  b80=createSprite(1069,247,65,2)
+  b80.shapeColor="blue";
+  b81=createSprite(1069,153,65,2)
+  b81.shapeColor="blue";
+  b15=createSprite(290,120,140,2)
+  b15.shapeColor="blue"
+  b16=createSprite(220,195,2,150)
+  b16.shapeColor="blue"
+  b82=createSprite(290,270,140,2)
+  b82.shapeColor="blue"
+  b17=createSprite(360,225,2,90)
+  b17.shapeColor="blue"
+  b18=createSprite(325,180,70,2)
+  b18.shapeColor="blue"
+  b19=createSprite(290,190,2,20)
+  b19.shapeColor="blue"
+  b20=createSprite(305,200,30,2)
+  b20.shapeColor="blue"
+  b21=createSprite(321,219,2,40)
+  b21.shapeColor="blue"
+  b22=createSprite(305,150,110,2)
+  b22.shapeColor="blue"
+  b23=createSprite(250,195,2,90)
+  b23.shapeColor="blue"
+  b24=createSprite(285,239,70,2)
+  b24.shapeColor="blue"
+  b25=createSprite(360,135,2,30)
+  b25.shapeColor="blue"
+  b26=createSprite(460,170,100,2)
+  b26.shapeColor="red"
+  b27=createSprite(460,270,100,2)
+  b27.shapeColor="red"
+  b28=createSprite(410,220,2,100)
+  b28.shapeColor="red"
+  b29=createSprite(510,220,2,100)
+  b29.shapeColor="red"
+  b30=createSprite(440,220,2,40)
+  b30.shapeColor="red"
+  b31=createSprite(480,220,2,40)
+  b31.shapeColor="red"
+  b32=createSprite(460,200,40,2)
+  b32.shapeColor="red"
+  b33=createSprite(460,240,40,2)
+  b33.shapeColor="red"
+  b34=createSprite(600,170,100,2)
+  b34.shapeColor="yellow"
+  b35=createSprite(600,270,100,2)
+  b35.shapeColor="yellow"
+  b36=createSprite(550,220,2,100)
+  b36.shapeColor="yellow"
+  b37=createSprite(650,220,2,100)
+  b37.shapeColor="yellow"
+  b38=createSprite(580,220,2,40)
+  b38.shapeColor="yellow"
+  b39=createSprite(620,220,2,40)
+  b39.shapeColor="yellow"
+  b40=createSprite(600,200,40,2)
+  b40.shapeColor="yellow"
+  b41=createSprite(600,240,40,2)
+  b41.shapeColor="yellow"
+  b42=createSprite(710,170,35,2)
+  b42.shapeColor="blue"
+  b43=createSprite(780,170,35,2)
+  b43.shapeColor="blue"
+  b44=createSprite(745,170,35,2)
+  b44.shapeColor="pink"
+  b45=createSprite(694,199,2,60)
+  b45.shapeColor="blue"
+  b46=createSprite(797,199,2,60)
+  b46.shapeColor="blue"
+  b47=createSprite(745,230,105,2)
+  b47.shapeColor="blue"
+  b48=createSprite(835,200,2,150)
+  b48.shapeColor="lime"
+  b49=createSprite(870,200,2,150)
+  b49.shapeColor="lime"
+  b50=createSprite(853,126,35,2)
+  b50.shapeColor="lime"
+  b51=createSprite(853,274,35,2)
+  b51.shapeColor="lime"
+  b52=createSprite(950,170,90,2)
+  b52.shapeColor="red"
+  b53=createSprite(905,220,2,100)
+  b53.shapeColor="red"
+  b54=createSprite(950,270,90,2)
+  b54.shapeColor="red"
+  b55=createSprite(995,195,2,50)
+  b55.shapeColor="red"
+  b56=createSprite(965,220,60,2)
+  b56.shapeColor="red"
+  b57=createSprite(935,235,2,30)
+  b57.shapeColor="red"
+  b58=createSprite(965,250,60,2)
+  b58.shapeColor="red"
+  b59=createSprite(995,260,2,20)
+  b59.shapeColor="red"
+  b60=createSprite(950,185,30,2)
+  b60.shapeColor="red"
+  b61=createSprite(950,200,30,2)
+  b61.shapeColor="red"
+  b62=createSprite(935,192,2,15)
+  b62.shapeColor="red"
+  b63=createSprite(965,192,2,15)
+  b63.shapeColor="red"
+  b64=createSprite(530,130,50,2)
+  b64.scale=5
+  b64.shapeColor="red"
+  b65=createSprite(745,130,20,2)
+  b65.scale=5
+  b65.shapeColor="blue"
+  b66=createSprite(950,130,15,2)
+  b66.scale=5
+  b66.shapeColor="blue"
+  b67=createSprite(1020,85,15,2)
+  b67.scale=5
+  b67.shapeColor="blue"
+  b68=createSprite(570,85,130,2)
+  b68.scale=4
+  b68.shapeColor="blue"
+  b69=createSprite(740,290,2,12)
+  b69.scale=5
+  b69.shapeColor="blue"
+  b70=createSprite(740,265,20,2)
+  b70.scale=5
+  b70.shapeColor="blue"
+  b71=createSprite(690,338,2,5)
+  b71.scale=5
+  b71.shapeColor="blue"
+  b72=createSprite(790,338,2,5)
+  b72.scale=5
+  b72.shapeColor="blue"
+  b73=createSprite(385,324,2,10)
+  b73.scale=5
+  b73.shapeColor="blue"
+  b74=createSprite(235,310,40,2)
+  b74.scale=5
+  b74.shapeColor="blue"
+  b75=createSprite(520,310,35,2)
+  b75.scale=5
+  b75.shapeColor="blue"
+  b76=createSprite(950,310,40,2)
+  b76.scale=5
+  b76.shapeColor="blue"
+  b77=createSprite(175,85,15,2)
+  b77.scale=5
+  b77.shapeColor="blue"
+  a1=createSprite(120,65,10,10)
+  a1.shapeColor="orange"
+  a2=createSprite(150,65,10,10)
+  a2.shapeColor="orange"
+  a3=createSprite(180,65,10,10)
+  a3.shapeColor="orange"
+  a4=createSprite(210,65,10,10)
+  a4.shapeColor="orange"
+  a5=createSprite(240,65,10,10)
+  a5.shapeColor="orange"
+  a6=createSprite(270,65,10,10)
+  a6.shapeColor="orange"
+  a7=createSprite(300,65,10,10)
+  a7.shapeColor="orange"
+  a8=createSprite(330,65,10,10)
+  a8.shapeColor="orange"
+  a9=createSprite(360,65,10,10)
+  a9.shapeColor="orange"
+  i1=createSprite(390,65,10,10)
+  i1.shapeColor="orange"
+  i2=createSprite(420,65,10,10)
+  i2.shapeColor="orange"
+  i3=createSprite(450,65,10,10)
+  i3.shapeColor="orange"
+  i4=createSprite(480,65,10,10)
+  i4.shapeColor="orange"
+  i5=createSprite(510,65,10,10)
+  i5.shapeColor="orange"
+  i6=createSprite(540,65,10,10)
+  i6.shapeColor="orange"
+  i7=createSprite(570,65,10,10)
+  i7.shapeColor="orange"
+  i8=createSprite(600,65,10,10)
+  i8.shapeColor="orange"
+  i9=createSprite(630,65,10,10)
+  i9.shapeColor="orange"
+  c1=createSprite(660,65,10,10)
+  c1.shapeColor="orange"
+  c2=createSprite(690,65,10,10)
+  c2.shapeColor="orange"
+  c3=createSprite(720,65,10,10)
+  c3.shapeColor="orange"
+  c4=createSprite(750,65,10,10)
+  c4.shapeColor="orange"
+  c5=createSprite(780,65,10,10)
+  c5.shapeColor="orange"
+  c6=createSprite(810,65,10,10)
+  c6.shapeColor="orange"
+  c7=createSprite(840,65,10,10)
+  c7.shapeColor="orange"
+  c8=createSprite(870,65,10,10)
+  c8.shapeColor="orange"
+  c9=createSprite(900,65,10,10)
+  c9.shapeColor="orange"
+  d1=createSprite(930,65,10,10)
+  d1.shapeColor="orange"
+  d2=createSprite(960,65,10,10)
+  d2.shapeColor="orange"
+  d3=createSprite(990,65,10,10)
+  d3.shapeColor="orange"
+  d4=createSprite(1020,65,10,10)
+  d4.shapeColor="orange"
+  d5=createSprite(1050,65,10,10)
+  d5.shapeColor="orange"
+  d6=createSprite(1080,65,10,10)
+  d6.shapeColor="orange"
+  d7=createSprite(1080,105,10,10)
+  d7.shapeColor="orange"
+  d8=createSprite(1050,105,10,10)
+  d8.shapeColor="orange"
+  d9=createSprite(1020,105,10,10)
+  d9.shapeColor="orange"
+  e1=createSprite(120,105,10,10)
+  e1.shapeColor="orange"
+  e2=createSprite(150,105,10,10)
+  e2.shapeColor="orange"
+  e3=createSprite(180,105,10,10)
+  e3.shapeColor="orange"
+  e4=createSprite(210,105,10,10)
+  e4.shapeColor="orange"
+  e5=createSprite(240,105,10,10)
+  e5.shapeColor="orange"
+  e6=createSprite(270,105,10,10)
+  e6.shapeColor="orange"
+  e7=createSprite(300,105,10,10)
+  e7.shapeColor="orange"
+  e8=createSprite(330,105,10,10)
+  e8.shapeColor="orange"
+  e9=createSprite(360,105,10,10)
+  e9.shapeColor="orange"
+  f1=createSprite(390,105,10,10)
+  f1.shapeColor="orange"
+  f2=createSprite(420,105,10,10)
+  f2.shapeColor="orange"
+  f3=createSprite(450,105,10,10)
+  f3.shapeColor="orange"
+  f4=createSprite(480,105,10,10)
+  f4.shapeColor="orange"
+  f5=createSprite(510,105,10,10)
+  f5.shapeColor="orange"
+  f6=createSprite(540,105,10,10)
+  f6.shapeColor="orange"
+  f7=createSprite(570,105,10,10)
+  f7.shapeColor="orange"
+  f8=createSprite(600,105,10,10)
+  f8.shapeColor="orange"
+  f9=createSprite(630,105,10,10)
+  f9.shapeColor="orange"
+  g1=createSprite(720,105,10,10)
+  g1.shapeColor="orange"
+  g2=createSprite(750,105,10,10)
+  g2.shapeColor="orange"
+  g3=createSprite(780,105,10,10)
+  g3.shapeColor="orange"
+  g4=createSprite(810,105,10,10)
+  g4.shapeColor="orange"
+  g5=createSprite(840,105,10,10)
+  g5.shapeColor="orange"
+  g6=createSprite(870,105,10,10)
+  g6.shapeColor="orange"
+  g7=createSprite(900,105,10,10)
+  g7.shapeColor="orange"
+  g8=createSprite(930,105,10,10)
+  g8.shapeColor="orange"
+  g9=createSprite(960,105,10,10)
+  g9.shapeColor="orange"
+  h1=createSprite(990,105,10,10)
+  h1.shapeColor="orange"
+  h2=createSprite(690,105,10,10)
+  h2.shapeColor="orange"
+  h3=createSprite(660,105,10,10)
+  h3.shapeColor="orange"
+  h4=createSprite(193,135,10,10)
+  h4.shapeColor="orange"
+  h5=createSprite(193,165,10,10)
+  h5.shapeColor="orange"
+  h6=createSprite(193,195,10,10)
+  h6.shapeColor="orange"
+  h7=createSprite(193,225,10,10)
+  h7.shapeColor="orange"
+  h8=createSprite(193,255,10,10)
+  h8.shapeColor="orange"
+  h9=createSprite(193,285,10,10)
+  h9.shapeColor="orange"
+  j1=createSprite(223,285,10,10)
+  j1.shapeColor="orange"
+  j2=createSprite(253,285,10,10)
+  j2.shapeColor="orange"
+  j3=createSprite(283,285,10,10)
+  j3.shapeColor="orange"
+  j4=createSprite(313,285,10,10)
+  j4.shapeColor="orange"
+  j5=createSprite(343,285,10,10)
+  j5.shapeColor="orange"
+  j6=createSprite(373,285,10,10)
+  j6.shapeColor="orange"
+  j7=createSprite(403,285,10,10)
+  j7.shapeColor="orange"
+  j8=createSprite(433,285,10,10)
+  j8.shapeColor="orange"
+  j9=createSprite(463,285,10,10)
+  j9.shapeColor="orange"
+  k1=createSprite(493,285,10,10)
+  k1.shapeColor="orange"
+  k2=createSprite(523,285,10,10)
+  k2.shapeColor="orange"
+  k3=createSprite(553,285,10,10)
+  k3.shapeColor="orange"
+  k4=createSprite(650,285,10,10)
+  k4.shapeColor="orange"
+  k5=createSprite(680,285,10,10)
+  k5.shapeColor="orange"
+  k6=createSprite(710,285,10,10)
+  k6.shapeColor="orange"
+  k7=createSprite(710,310,10,10)
+  k7.shapeColor="orange"
+  k8=createSprite(710,335,10,10)
+  k8.shapeColor="orange"
+  k9=createSprite(740,335,10,10)
+  k9.shapeColor="orange"
+  l1=createSprite(770,335,10,10)
+  l1.shapeColor="orange"
+  l2=createSprite(770,310,10,10)
+  l2.shapeColor="orange"
+  l3=createSprite(770,285,10,10)
+  l3.shapeColor="orange"
+  l4=createSprite(800,290,10,10)
+  l4.shapeColor="orange"
+  l5=createSprite(830,290,10,10)
+  l5.shapeColor="orange"
+  l6=createSprite(860,290,10,10)
+  l6.shapeColor="orange"
+  l7=createSprite(890,290,10,10)
+  l7.shapeColor="orange"
+  l8=createSprite(920,290,10,10)
+  l8.shapeColor="orange"
+  l9=createSprite(950,290,10,10)
+  l9.shapeColor="orange"
+  m1=createSprite(980,290,10,10)
+  m1.shapeColor="orange"
+  m2=createSprite(1010,290,10,10)
+  m2.shapeColor="orange"
+  m3=createSprite(1040,290,10,10)
+  m3.shapeColor="orange"
+  m4=createSprite(1070,290,10,10)
+  m4.shapeColor="orange"
+  m5=createSprite(1070,315,10,10)
+  m5.shapeColor="orange"
+  m6=createSprite(1070,335,10,10)
+  m6.shapeColor="orange"
+  m7=createSprite(1040,335,10,10)
+  m7.shapeColor="orange"
+  m8=createSprite(1010,335,10,10)
+  m8.shapeColor="orange"
+  m9=createSprite(980,335,10,10)
+  m9.shapeColor="orange"
+  n1=createSprite(950,335,10,10)
+  n1.shapeColor="orange"
+  n2=createSprite(920,335,10,10)
+  n2.shapeColor="orange"
+  n3=createSprite(920,335,10,10)
+  n3.shapeColor="orange"
+  n4=createSprite(920,335,10,10)
+  n4.shapeColor="orange"
+  n5=createSprite(890,335,10,10)
+  n5.shapeColor="orange"
+  n6=createSprite(860,335,10,10)
+  n6.shapeColor="orange"
+  n7=createSprite(830,337,10,10)
+  n7.shapeColor="orange"
+  n8=createSprite(830,313,10,10)
+  n8.shapeColor="orange"
+  n9=createSprite(1015,260,10,10)
+  n9.shapeColor="orange"
+  o1=createSprite(1015,230,10,10)
+  o1.shapeColor="orange"
+  o2=createSprite(1015,200,10,10)
+  o2.shapeColor="orange"
+  o3=createSprite(1015,175,10,10)
+  o3.shapeColor="orange"
+  o4=createSprite(1015,150,10,10)
+  o4.shapeColor="orange"
+  o5=createSprite(990,150,10,10)
+  o5.shapeColor="orange"
+  o6=createSprite(955,150,10,10)
+  o6.shapeColor="orange"
+  o7=createSprite(925,150,10,10)
+  o7.shapeColor="orange"
+  o8=createSprite(890,150,10,10)
+  o8.shapeColor="orange"
+  o9=createSprite(890,175,10,10)
+  o9.shapeColor="orange"
+  p1=createSprite(890,205,10,10)
+  p1.shapeColor="orange"
+  p2=createSprite(890,230,10,10)
+  p2.shapeColor="orange"
+  p3=createSprite(890,260,10,10)
+  p3.shapeColor="orange"
+  p4=createSprite(815,265,10,10)
+  p4.shapeColor="orange"
+  p5=createSprite(815,235,10,10)
+  p5.shapeColor="orange"
+  p6=createSprite(815,205,10,10)
+  p6.shapeColor="orange"
+  p7=createSprite(815,175,10,10)
+  p7.shapeColor="orange"
+  p8=createSprite(815,150,10,10)
+  p8.shapeColor="orange"
+  p9=createSprite(785,150,10,10)
+  p9.shapeColor="orange"
+  q1=createSprite(755,150,10,10)
+  q1.shapeColor="orange"
+  q2=createSprite(725,150,10,10)
+  q2.shapeColor="orange"
+  q3=createSprite(695,150,10,10)
+  q3.shapeColor="orange"
+  q4=createSprite(665,150,10,10)
+  q4.shapeColor="orange"
+  q5=createSprite(635,150,10,10)
+  q5.shapeColor="orange"
+  q6=createSprite(605,150,10,10)
+  q6.shapeColor="orange"
+  q7=createSprite(575,150,10,10)
+  q7.shapeColor="orange"
+  q8=createSprite(545,150,10,10)
+  q8.shapeColor="orange"
+  q9=createSprite(515,150,10,10)
+  q9.shapeColor="orange"
+  r1=createSprite(485,150,10,10)
+  r1.shapeColor="orange"
+  r2=createSprite(455,150,10,10)
+  r2.shapeColor="orange"
+  r3=createSprite(425,150,10,10)
+  r3.shapeColor="orange"
+  r4=createSprite(390,150,10,10)
+  r4.shapeColor="orange"
+  r5=createSprite(390,180,10,10)
+  r5.shapeColor="orange"
+  r6=createSprite(390,210,10,10)
+  r6.shapeColor="orange"
+  r7=createSprite(390,235,10,10)
+  r7.shapeColor="orange"
+  r8=createSprite(390,260,10,10)
+  r8.shapeColor="orange"
+  r9=createSprite(530,170,10,10)
+  r9.shapeColor="orange"
+  s1=createSprite(530,200,10,10)
+  s1.shapeColor="orange"
+  s2=createSprite(530,230,10,10)
+  s2.shapeColor="orange"
+  s3=createSprite(530,260,10,10)
+  s3.shapeColor="orange"
+  s4=createSprite(670,260,10,10)
+  s4.shapeColor="orange"
+  s5=createSprite(670,235,10,10)
+  s5.shapeColor="orange"
+  s6=createSprite(670,205,10,10)
+  s6.shapeColor="orange"
+  s7=createSprite(670,175,10,10)
+  s7.shapeColor="orange"
+  s8=createSprite(650,310,10,10)
+  s8.shapeColor="orange"
+  s9=createSprite(650,335,10,10)
+  s9.shapeColor="orange"
+  t1=createSprite(620,335,10,10)
+  t1.shapeColor="orange"
+  t2=createSprite(590,335,10,10)
+  t2.shapeColor="orange"
+  t3=createSprite(560,335,10,10)
+  t3.shapeColor="orange"
+  t4=createSprite(530,335,10,10)
+  t4.shapeColor="orange"
+  t5=createSprite(500,335,10,10)
+  t5.shapeColor="orange"
+  t6=createSprite(470,335,10,10)
+  t6.shapeColor="orange"
+  t7=createSprite(440,335,10,10)
+  t7.shapeColor="orange"
+  t8=createSprite(410,335,10,10)
+  t8.shapeColor="orange"
+  t9=createSprite(410,310,10,10)
+  t9.shapeColor="orange"
+  u1=createSprite(360,310,10,10)
+  u1.shapeColor="orange"
+  u2=createSprite(360,335,10,10)
+  u2.shapeColor="orange"
+  u3=createSprite(330,335,10,10)
+  u3.shapeColor="orange"
+  u4=createSprite(300,335,10,10)
+  u4.shapeColor="orange"
+  u5=createSprite(270,335,10,10)
+  u5.shapeColor="orange"
+  u6=createSprite(240,335,10,10)
+  u6.shapeColor="orange"
+  u7=createSprite(210,335,10,10)
+  u7.shapeColor="orange"
+  u8=createSprite(180,335,10,10)
+  u8.shapeColor="orange"
+  u9=createSprite(150,335,10,10)
+  u9.shapeColor="orange"
+  v1=createSprite(120,335,10,10)
+  v1.shapeColor="orange"
+  v2=createSprite(120,310,10,10)
+  v2.shapeColor="orange"
+  v3=createSprite(120,285,10,10)
+  v3.shapeColor="orange"
+  v4=createSprite(145,285,10,10)
+  v4.shapeColor="orange"
+  v5=createSprite(170,285,10,10)
+  v5.shapeColor="orange"
+  score=0;
+  pac=createSprite(600,287,20,20)
+  pac.addImage("Pac",pac1)
+  pac.addImage("Pac_left",pac2)
+  pac.addImage("Pac_up",pac3)
+  pac.addImage("Pac_down",pac4)
+  pac.scale=0.055
+  gh1=createSprite(750,200,20,20)
+  gh1.shapeColor="white"
+}
+
+
+function draw() {
+background("black");
+fill("white")
+textSize(24)
+text("Score: "+ score, 450,40)
+fill("white")
+textSize(12)
+text("Miss I tried gameState but then I would have to change the visibility of all points I had created",650,40)
+
+createEdgeSprites();
+gh1.collide(b1)
+gh1.collide(b2)
+gh1.collide(b3)
+gh1.collide(b4)
+gh1.collide(b5)
+gh1.collide(b6)
+gh1.collide(b7)
+gh1.collide(b8)
+gh1.collide(b9)
+gh1.collide(b10)
+gh1.collide(b11)
+gh1.collide(b12)
+gh1.collide(b13)
+gh1.collide(b14)
+gh1.collide(b15)
+gh1.collide(b16)
+gh1.collide(b17)
+gh1.collide(b18)
+gh1.collide(b19)
+gh1.collide(b20)
+gh1.collide(b21)
+gh1.collide(b22)
+gh1.collide(b23)
+gh1.collide(b24)
+gh1.collide(b25)
+gh1.collide(b26)
+gh1.collide(b27)
+gh1.collide(b28)
+gh1.collide(b29)
+gh1.collide(b30)
+gh1.collide(b31)
+gh1.collide(b32)
+gh1.collide(b33)
+gh1.collide(b34)
+gh1.collide(b35)
+gh1.collide(b36)
+gh1.collide(b37)
+gh1.collide(b38)
+gh1.collide(b39)
+gh1.collide(b40)
+gh1.collide(b41)
+gh1.collide(b42)
+gh1.collide(b43)
+gh1.collide(b45)
+gh1.collide(b46)
+gh1.collide(b47)
+gh1.collide(b48)
+gh1.collide(b49)
+gh1.collide(b50)
+gh1.collide(b51)
+gh1.collide(b52)
+gh1.collide(b53)
+gh1.collide(b54)
+gh1.collide(b55)
+gh1.collide(b56)
+gh1.collide(b57)
+gh1.collide(b58)
+gh1.collide(b59)
+gh1.collide(b60)
+gh1.collide(b61)
+gh1.collide(b62)
+gh1.collide(b63)
+gh1.collide(b64)
+gh1.collide(b65)
+gh1.collide(b66)
+gh1.collide(b67)
+gh1.collide(b68)
+gh1.collide(b69)
+gh1.collide(b70)
+gh1.collide(b71)
+gh1.collide(b72)
+gh1.collide(b73)
+gh1.collide(b74)
+gh1.collide(b75)
+gh1.collide(b76)
+gh1.collide(b77)
+gh1.collide(b78)
+gh1.collide(b79)
+gh1.collide(b80)
+gh1.collide(b81)
+gh1.collide(b82)
+pac.collide(b1)
+pac.collide(b2)
+pac.collide(b3)
+pac.collide(b4)
+pac.collide(b5)
+pac.collide(b6)
+pac.collide(b7)
+pac.collide(b8)
+pac.collide(b9)
+pac.collide(b10)
+pac.collide(b11)
+pac.collide(b12)
+pac.collide(b13)
+pac.collide(b14)
+pac.collide(b15)
+pac.collide(b16)
+pac.collide(b17)
+pac.collide(b18)
+pac.collide(b19)
+pac.collide(b20)
+pac.collide(b21)
+pac.collide(b22)
+pac.collide(b23)
+pac.collide(b24)
+pac.collide(b25)
+pac.collide(b26)
+pac.collide(b27)
+pac.collide(b28)
+pac.collide(b29)
+pac.collide(b30)
+pac.collide(b31)
+pac.collide(b32)
+pac.collide(b33)
+pac.collide(b34)
+pac.collide(b35)
+pac.collide(b36)
+pac.collide(b37)
+pac.collide(b38)
+pac.collide(b39)
+pac.collide(b40)
+pac.collide(b41)
+pac.collide(b42)
+pac.collide(b43)
+pac.collide(b44)
+pac.collide(b45)
+pac.collide(b46)
+pac.collide(b47)
+pac.collide(b48)
+pac.collide(b49)
+pac.collide(b50)
+pac.collide(b51)
+pac.collide(b52)
+pac.collide(b53)
+pac.collide(b54)
+pac.collide(b55)
+pac.collide(b56)
+pac.collide(b57)
+pac.collide(b58)
+pac.collide(b59)
+pac.collide(b60)
+pac.collide(b61)
+pac.collide(b62)
+pac.collide(b63)
+pac.collide(b64)
+pac.collide(b65)
+pac.collide(b66)
+pac.collide(b67)
+pac.collide(b68)
+pac.collide(b69)
+pac.collide(b70)
+pac.collide(b71)
+pac.collide(b72)
+pac.collide(b73)
+pac.collide(b74)
+pac.collide(b75)
+pac.collide(b76)
+pac.collide(b77)
+pac.collide(b78)
+pac.collide(b79)
+pac.collide(b80)
+pac.collide(b81)
+pac.collide(b82)
+
+if(gameState===PLAY){
+  if(keyDown(UP_ARROW)){
+    pac.velocityY=-2
+    pac.velocityX=0
+    pac.changeImage("Pac_up",pac3)
+  }
+  if(keyDown(DOWN_ARROW)){
+    pac.velocityY=2
+    pac.velocityX=0
+    pac.changeImage("Pac_down",pac4)
+  }
+  if(keyDown(RIGHT_ARROW)){
+    pac.velocityX=2
+    pac.velocityY=0
+    pac.changeImage("Pac",pac1)
+  }
+  if(keyDown(LEFT_ARROW)){
+    pac.velocityX=-2
+    pac.velocityY=0
+    pac.changeImage("Pac_left",pac2)
+  }
+  if(pac.isTouching(a1)){
+   a1.visible=false;
+   score=score+1;
+  }
+  if(pac.isTouching(a2)){
+    a2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(a3)){
+    a3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(a4)){
+    a4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(a5)){
+    a5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(a6)){
+    a6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(a7)){
+    a7.visible=false;
+      score=score+1;
+   }
+   if(pac.isTouching(a8)){
+    a8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(a9)){
+    a9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c1)){
+    c1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c2)){
+    c2.visible=false;
+    score=score+1; 
+  }
+   if(pac.isTouching(c3)){
+    c3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c4)){
+    c4.visible=false;
+    score=score+1; 
+  }
+   if(pac.isTouching(c5)){
+    c5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c6)){
+    c6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c7)){
+    c7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c8)){
+    c8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(c9)){
+    c9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d1)){
+    d1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d2)){
+    d2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d3)){
+    d3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d4)){
+    d4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d5)){
+    d5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d6)){
+    d6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d7)){
+    d7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d8)){
+    d8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(d9)){
+    d9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e1)){
+    e1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e2)){
+    e2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e3)){
+    e3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e4)){
+    e4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e5)){
+    e5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e6)){
+    e6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e7)){
+    e7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e8)){
+    e8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(e9)){
+    e9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f1)){
+    f1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f2)){
+    f2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f3)){
+    f3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f4)){
+    f4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f5)){
+    f5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f6)){
+    f6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f7)){
+    f7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f8)){
+    f8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(f9)){
+    f9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g1)){
+    g1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g2)){
+    g2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g3)){
+    g3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g4)){
+    g4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g5)){
+    g5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g6)){
+    g6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g7)){
+    g7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g8)){
+    g8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(g9)){
+    g9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h1)){
+    h1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h2)){
+    h2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h3)){
+    h3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h4)){
+    h4.visible=false;      
+    score=score+1;
+   }
+   if(pac.isTouching(h5)){
+    h5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h6)){
+    h6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h7)){
+    h7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h8)){
+    h8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(h9)){
+    h9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i1)){
+    i1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i2)){
+    i2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i3)){
+    i3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i4)){
+    i4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i5)){
+    i5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i6)){
+    i6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i7)){
+    i7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i8)){
+    i8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(i9)){
+    i9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j1)){
+    j1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j2)){
+    j2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j3)){
+    j3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j4)){
+    j4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j5)){
+    j5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j6)){
+    j6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j7)){
+    j7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j8)){
+    j8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(j9)){
+    j9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k1)){
+    k1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k2)){
+    k2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k3)){
+    k3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k4)){
+    k4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k5)){
+    k5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k6)){
+    k6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k7)){
+    k7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k8)){
+    k8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(k9)){
+    k9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l1)){
+    l1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l2)){
+    l2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l3)){
+    l3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l4)){
+    l4.visible=false;      
+    score=score+1;
+   }
+   if(pac.isTouching(l5)){
+    l5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l6)){
+    l6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l7)){
+    l7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(l8)){
+    l8.visible=false;     
+     score=score+1;
+   }
+   if(pac.isTouching(l9)){
+    l9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m1)){
+    m1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m2)){
+    m2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m3)){
+    m3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m4)){
+    m4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m5)){
+    m5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m6)){
+    m6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m7)){
+    m7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m8)){
+    m8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(m9)){
+    m9.visible=false;     
+     score=score+1;
+   }
+   if(pac.isTouching(n1)){
+    n1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(n2)){
+    n2.visible=false;      
+    score=score+1;
+   }
+   if(pac.isTouching(n3)){
+    n3.visible=false;      
+    score=score+1;
+   }
+   if(pac.isTouching(n4)){
+    n4.visible=false;     
+     score=score+1;
+   }
+   if(pac.isTouching(n5)){
+    n5.visible=false;     
+     score=score+1;
+   }
+   if(pac.isTouching(n6)){
+    n6.visible=false;
+   score=score+1;
+   }
+   if(pac.isTouching(n7)){
+    n7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(n8)){
+    n8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(n9)){
+    n9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o1)){
+    o1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o2)){
+    o2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o3)){
+    o3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o4)){
+    o4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o5)){
+    o5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o6)){
+    o6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o7)){
+    o7.visible=false;     
+     score=score+1;
+   }
+   if(pac.isTouching(o8)){
+    o8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(o9)){
+    o9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p1)){
+    p1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p2)){
+    p2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p3)){
+    p3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p4)){
+    p4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p5)){
+    p5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p6)){
+    p6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p7)){
+    p7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p8)){
+    p8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(p9)){
+    p9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q1)){
+    q1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q2)){
+    q2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q3)){
+    q3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q4)){
+    q4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q5)){
+    q5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q6)){
+    q6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q7)){
+    q7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q8)){
+    q8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(q9)){
+    q9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r1)){
+    r1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r2)){
+    r2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r3)){
+    r3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r4)){
+    r4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r5)){
+    r5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r6)){
+    r6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r7)){
+    r7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r8)){
+    r8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(r9)){
+    r9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s1)){
+    s1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s2)){
+    s2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s3)){
+    s3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s4)){
+    s4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s5)){
+    s5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s6)){
+    s6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s7)){
+    s7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s8)){
+    s8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(s9)){
+    s9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t1)){
+    t1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t2)){
+    t2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t3)){
+    t3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t4)){
+    t4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t5)){
+    t5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t6)){
+    t6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t7)){
+    t7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t8)){
+    t8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(t9)){
+    t9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u1)){
+    u1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u2)){
+    u2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u3)){
+    u3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u4)){
+    u4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u5)){
+    u5.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u6)){
+    u6.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u7)){
+    u7.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u8)){
+    u8.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(u9)){
+    u9.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(v1)){
+    v1.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(v2)){
+    v2.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(v3)){
+    v3.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(v4)){
+    v4.visible=false;
+    score=score+1;
+   }
+   if(pac.isTouching(v5)){
+    v5.visible=false;
+    score=score+1;
+   }
+   
+  }
+ drawSprites();
+}
